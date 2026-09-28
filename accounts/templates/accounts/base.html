@@ -1,0 +1,14 @@
+{% load static %}<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}Чек на удачу{% endblock %}</title>
+  <link rel="stylesheet" href="{% static 'accounts/style.css' %}">
+</head>
+<body>
+  <main class="card">
+    <a class="brand" href="{% url 'dashboard' %}"><span class="brand-mark">ч</span>Чек на удачу</a>
+    {% block content %}{% endblock %}
+  </main>
+</body>
+</html>

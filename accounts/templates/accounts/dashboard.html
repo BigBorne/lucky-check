@@ -1,0 +1,7 @@
+{% extends 'accounts/base.html' %}
+{% block title %}Личный кабинет — Чек на удачу{% endblock %}
+{% block content %}
+<h1>Личный кабинет</h1>
+<p class="welcome">Вы вошли как <strong>{{ request.user.username }}</strong>.</p>
+<form method="post" action="{% url 'logout' %}">{% csrf_token %}<button class="secondary" type="submit">Выйти</button></form>
+{% endblock %}
